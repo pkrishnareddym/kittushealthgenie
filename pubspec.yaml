@@ -1,0 +1,73 @@
+name: kittushealthgenie
+description: AI-powered Health Platform (KittU Health Genie)
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+# ========================
+# CORE DEPENDENCIES
+# ========================
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ---------------- UI ----------------
+  cupertino_icons: ^1.0.8
+  lottie: ^3.3.2
+  flutter_animate: ^4.5.0
+
+  # ---------------- STATE ----------------
+  flutter_riverpod: ^2.5.1
+
+  # ---------------- NETWORK ----------------
+  dio: ^5.4.0
+  http: ^1.2.1
+  web_socket_channel: ^2.4.0
+
+  # ---------------- AI / ML ----------------
+  tflite_flutter: ^0.10.4
+
+  # ---------------- STORAGE ----------------
+  shared_preferences: ^2.2.2
+
+  # ---------------- SERIALIZATION ----------------
+  json_annotation: ^4.9.0
+
+  # ---------------- 3D / UNITY ----------------
+  flutter_unity_widget: ^4.1.0   # ✅ keep ONLY latest
+  model_viewer_plus: ^1.10.0     # ✅ Web/Desktop fallback
+  vector_math: ^2.1.4            # ✅ stable version
+
+# ========================
+# DEV TOOLS
+# ========================
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+  # Code Generation
+  build_runner: ^2.4.8
+  json_serializable: ^6.8.0
+
+# ========================
+# FLUTTER CONFIG
+# ========================
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/models/human_body.glb
+    - assets/models/model.tflite
+
+# ========================
+# OVERRIDES (ONLY IF NEEDED)
+# ========================
+# Remove unless build fails
+# dependency_overrides:
+#   analyzer: ^6.4.1

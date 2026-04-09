@@ -1,0 +1,4 @@
+{
+  "codegpt.apiKey": "your_api_key_here",
+  "codegpt.model": "gpt-4o"
+}

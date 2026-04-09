@@ -1,0 +1,18 @@
+﻿version: '3.8'
+services:
+  postgres:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: kittu
+      POSTGRES_PASSWORD: kittu
+      POSTGRES_DB: health
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
